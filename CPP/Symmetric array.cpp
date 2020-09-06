@@ -1,5 +1,4 @@
 /*
-
     Symmetric Matrix
 
     You are given a square matrix with a size. Then you are given size*size int numbers.
@@ -13,11 +12,9 @@
 
     Output:
     Yes
-
 */
 
 /*
-
     Solution:
     We know that a matrix is symmetric if each element regarding the main diagonal is the same.
     Example: matrix[1][2] should be equal to matrix[2][1]
@@ -29,7 +26,6 @@
     - - * *
     - - - *
     - - - -
-
 */
 
 
