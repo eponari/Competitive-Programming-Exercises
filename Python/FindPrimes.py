@@ -1,5 +1,4 @@
 """
-
   Find Prime Numbers
   In a certain range, find the number of prime number
 
@@ -9,15 +8,10 @@
   Output:
   4
 
-"""
-
-"""
-
-    Solution:
-    Use the idea of Sieve of Eratosthenes(https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes).
-    While we find Primes, make sure to store them and delete their multiples as we seen it in the range.
-    In the end use a list comprehansion comprehension to target the primes within our range.
-
+  Solution:
+  Use the idea of Sieve of Eratosthenes(https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes).
+  While we find Primes, make sure to store them and delete their multiples as we seen it in the range.
+  In the end use a list comprehansion comprehension to target the primes within our range.
 """
 
 #The only even prime number is going to be our starting point
