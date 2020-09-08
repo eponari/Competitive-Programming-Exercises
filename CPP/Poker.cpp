@@ -16,9 +16,7 @@
 
     Output:
     Straight
-*/
 
-/*
     Solution:
     Since the cards are given with intiger numbers from 1 to 13, we can sort them and turn the problem from a problem dealing with permutations,
     to a problem dealing with combinations.(basiclly the order of elements doesn't matter and there are less cases in combinations than in permutations.)

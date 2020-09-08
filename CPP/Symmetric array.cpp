@@ -12,9 +12,7 @@
 
     Output:
     Yes
-*/
 
-/*
     Solution:
     We know that a matrix is symmetric if each element regarding the main diagonal is the same.
     Example: matrix[1][2] should be equal to matrix[2][1]

@@ -13,9 +13,7 @@
     Ladder nr.1:         Ladder nr.2:
     *                    ***
     **
-*/
-
-/*
+    
     Solution:
     This is a generally hard problem to create a efficent algorithm because we have repetition of the same element many times.
     To eleminate this, we can use Dynammic Programming and Memoization in order to reduce repetitive work. 

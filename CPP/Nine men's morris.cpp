@@ -9,9 +9,7 @@
 
     Output:
     Yes
-*/
 
-/*
     Solution:
     Since the positions are given with strings from a character and a number, we can sort them and turn the problem from a problem dealing with permutations,
     to a problem dealing with combinations.(basiclly the order of elements doesn't matter and there are less cases in combinations than in permutations.)
