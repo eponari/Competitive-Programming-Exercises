@@ -13,12 +13,10 @@
 
     Explanation:
     The sum from the second element(3) till the seventh element(4).
-*/
-
-/*
+    
     Solution:
     There are 2 ways to solve this problem:
-    
+
     -Brute Force: get 2 pointers and iterate over each index to find the sum of different sequences and pick the maximum you get.
 
      | right pointer
@@ -26,7 +24,7 @@
     -2 3 5 8 -10 13 4 -1 -5 2
      ^
      | left pointer
-    -Linear Time Solution: we don't have to calculate the sum each time we move the pointer. We use just one pointer to 
+    -Linear Time Solution: we don't have to calculate the sum each time we move the pointer. We use just one pointer to
     iterate over the array and along the way we keep track of the ideal sum on 1 cell of this array and the best sum we have
     had overall. We compare them over time and find out in linear time what is the maximum sequential sum in this array.
 
