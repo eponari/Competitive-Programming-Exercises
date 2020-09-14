@@ -1,23 +1,18 @@
 /*
-  Special Pattern
-  Create a pattern by using a 2D array.The steps are:
-  -First you put 4 numbers to the corners of the square.
-  -Then you write 4 other numbers next to each corner until finish outer layer of the square. 
-  -After you finish this layer, you go to the inner layer and you repeat.
+  Print the maximum continous sum limits.
+  You are given n numbers. You have to print the left and right index of the maximum continous sum in this array of numbers.
 
   Test Case:
-  4
+  9
+
+    2 -5 2 6 7 -10 11 -6 8
 
   Output:
-  1 5 9 2
-  12 13 14 6
-  8 16 15 10
-  4 11 7 3
+  3 9
 
   Solution:
-  Just follow the algorithm given above. What we have to be careful with are 2 things:
-  1. The borders in a matrix are given by the value int((1+size)/2).
-  2. If the size is odd, we need to take care of the element in the middle of the matrix because the borders above are for even numbers.
+  We use dynamic programming to find the maximum continous sum for every index. If we have to start over with a new left to have a maximum, 
+  we create a new left each time we have to do this. It helps us keep track of the maximum sub array.   
 */
 
 #include <iostream>
@@ -27,32 +22,43 @@ using namespace std;
 vector <int> seq;
 
 void largestContinousSum(){
+  //suppose the max sub array starts and ends at 0.
   int maxSeqNow=seq[0];
   int maxSeqEver=seq[0];
   int leftNow=0,left=0;
   int rightNow=0,right=0;
+  //starting from 1
   for(int i=1;i<seq.size();i++){
+    //if a element is equal to 0, skip it since it doesn't effect our sum.
     if(seq[i]==0){
       continue;
     }
+    //right now is the value where we are at.
     rightNow=i;
+    //if it is better to start over from the index where we are at.
     if(maxSeqNow+seq[i]<seq[i]){
+      //redeclare maxSeqNow and leftNow.
       maxSeqNow=seq[i];
       leftNow=i;
     }
     else{
+      //else just move on.
       maxSeqNow=maxSeqNow+seq[i];
     }
+    //if max we have now is bigger that we have ever seen.
     if(maxSeqNow>maxSeqEver){
+      //maxSeqEver is maxSeqNow and we move left and right.
       maxSeqEver=maxSeqNow;
       left=leftNow;
       right=rightNow;
     }
   }
+  //print the left and right.
   cout<<left+1<<" "<<right+1;
 }
 
 int main() {
+  //get n and n integers.
   int n;
   cin>>n;
   for(int i=0;i<n;i++){
