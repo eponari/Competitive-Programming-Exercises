@@ -1,7 +1,8 @@
 /*
   Brackets
 
-  You are given the length of a string and the string itself. It contains only {,[,(,),] and }. Find out if the expression with brackets is regular according to mathematics or not.
+  You are given the length of a string and the string itself. 
+  It contains only {,[,(,),] and }. Find out if the expression with brackets is regular according to mathematics or not.
 
   Test Case:
   6
@@ -14,8 +15,14 @@
   ) and ] have wrong order.
 
   Solution:
-  We need to use stacks for this because of their form. Stack is a data structure known for the first in-first out principle. We can check the last element inserted by checking the top of the stack. 
-  For the opening brackets we just insert them in the stack. If we encounter a closing bracket, we check the top of the stack. If it matches we delete the top of the stack and just move on to the next bracket,but if they don't match,just print No because it isn't regular. In the end we need to check if we have any opening bracket that isn't matched because this would make our expression irregular. If everything is finished successfully, we just print "Yes" to indicate a regular expression. 
+  We need to use stacks for this because of their form.
+  Stack is a data structure known for the first in-first out principle. 
+  We can check the last element inserted by checking the top of the stack. 
+  For the opening brackets we just insert them in the stack. 
+  If we encounter a closing bracket, we check the top of the stack. 
+  If it matches we delete the top of the stack and just move on to the next bracket,but if they don't match,just print No because it isn't regular.
+  In the end we need to check if we have any opening bracket that isn't matched because this would make our expression irregular.
+  If everything is finished successfully, we just print "Yes" to indicate a regular expression. 
 */
 
 //import stack library
